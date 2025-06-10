@@ -55,20 +55,20 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Buscador de Imágenes Pexels</h1>
+      <h1>PEXEL SEARCH 🖼️</h1>
 
       <form onSubmit={handleSubmit} className="search-form">
         <input
           type="text"
           value={inputSearch}
           onChange={(e) => setInputSearch(e.target.value)}
-          placeholder="Busca imágenes..."
+          placeholder="Search image..."
           className="search-input"
         />
-        <button type="submit" className="search-button">Buscar</button>
+        <button type="submit" className="search-button">Search image 🔎</button>
       </form>
 
-      {loading && <p>Cargando imágenes...</p>}
+      {loading && <p>Loading images...</p>}
       {error && <p className="error-message">Error: {error}</p>}
 
       <div className="image-grid">
@@ -78,7 +78,7 @@ function App() {
             <p className="photographer-name">Foto por: {photo.photographer}</p>
           </div>
         ))}
-        {!loading && !error && photos.length === 0 && query && <p>No se encontraron imágenes para "{query}".</p>}
+        {!loading && !error && photos.length === 0 && query && <p>No images found for "{query}".</p>}
       </div>
     </div>
   );
